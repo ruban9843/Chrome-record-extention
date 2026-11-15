@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body { width: 300px; margin: 0; padding: 14px; font: 14px system-ui, sans-serif; }
+  h1 { font-size: 15px; margin: 0 0 10px; }
+  label { display: block; margin: 4px 0; }
+  small { color: #666; display: block; margin-left: 22px; }
+  button { width: 100%; padding: 9px; margin-top: 10px; font-size: 14px; cursor: pointer; }
+  #folder { margin-top: 12px; font-size: 12px; color: #444; }
+  #status { margin-top: 10px; font-weight: 600; }
+  #notice { margin-top: 6px; color: #b45309; font-size: 12px; }
+  [hidden] { display: none !important; }
+</style>
+
+<h1>Recorder</h1>
+
+<div id="modes">
+  <label><input type="radio" name="mode" value="desktop" checked> Screen + system audio</label>
+  <small>Pick "Entire screen" and tick "Also share system audio".</small>
+  <label><input type="radio" name="mode" value="tab"> Current tab (tab audio only)</label>
+</div>
+
+<div id="folder">Save to: <b id="folderName">…</b> <a href="#" id="change">Change</a></div>
+
+<button id="start">Start recording</button>
+<button id="pause" hidden>Pause</button>
+<button id="resume" hidden>Resume</button>
+<button id="stop" hidden>Stop &amp; save</button>
+
+<div id="status"></div>
+<div id="notice"></div>
+<script src="store.js"></script>
+<script src="popup.js"></script>

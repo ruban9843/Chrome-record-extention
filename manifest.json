@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Tab & System Audio Recorder",
+  "description": "Records tab or screen video with audio (compressed, seekable WebM). Pause/Resume/Stop, saves to a folder you pick once.",
+  "version": "1.1.0",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "tabCapture",
+    "desktopCapture",
+    "offscreen",
+    "downloads",
+    "storage",
+    "activeTab"
+  ],
+  "background": { "service_worker": "background.js" },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Recorder",
+    "default_popup": "popup.html"
+  }
+}
